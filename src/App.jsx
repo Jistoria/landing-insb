@@ -101,7 +101,7 @@ Número de móvil: ${formData.movil || '-'}`,
     [formData],
   )
 
-  const whatsappUrl = `https://wa.me/593958731399?text=${encodeURIComponent(messageText)}`
+  const whatsappUrl = `https://wa.me/593987445584?text=${encodeURIComponent(messageText)}`
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -160,7 +160,7 @@ Número de móvil: ${formData.movil || '-'}`,
         <section id="inicio" className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
           <div className="reveal space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-neonCyan/50 bg-neonCyan/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-neonCyan">
-              <Sparkles size={14} /> Tu conocimiento se convierte en victoria
+              <Sparkles size={14} /> Tu conocimiento se convierte en victoria • Deportes + Casino
             </span>
             <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl">
               Lleva tu pasión por el deporte al <span className="bg-gradient-to-r from-neonGreen to-neonPurple bg-clip-text text-transparent">siguiente nivel</span>
@@ -185,6 +185,11 @@ Número de móvil: ${formData.movil || '-'}`,
                   <span className="rounded-full border border-white/15 px-3 py-1">Elephant Strategy Engine</span>
                   <span className="text-neonGreen">+27.8%</span>
                 </div>
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="rounded-full border border-neonGreen/40 bg-neonGreen/10 px-2 py-1 text-neonGreen">Deportes</span>
+                  <span className="rounded-full border border-neonGold/40 bg-neonGold/10 px-2 py-1 text-neonGold">Casino</span>
+                  <span className="rounded-full border border-neonCyan/40 bg-neonCyan/10 px-2 py-1 text-neonCyan">Gaming</span>
+                </div>
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4">
                   <div className="mb-3 flex items-center justify-between">
                     <div className="flex items-center gap-2 text-neonCyan"><ShieldCheck size={18} /> Insight Score</div>
@@ -200,9 +205,9 @@ Número de móvil: ${formData.movil || '-'}`,
                     <polyline fill="none" stroke="url(#lineGradient)" strokeWidth="4" points="10,70 60,60 110,62 160,40 210,32 250,14" />
                     <defs>
                       <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#22ff99" />
-                        <stop offset="50%" stopColor="#22d3ee" />
-                        <stop offset="100%" stopColor="#8b5cf6" />
+                        <stop offset="0%" stopColor="#56ff8f" />
+                        <stop offset="50%" stopColor="#57e8ff" />
+                        <stop offset="100%" stopColor="#ff4fd8" />
                       </linearGradient>
                     </defs>
                   </svg>
@@ -216,7 +221,7 @@ Número de móvil: ${formData.movil || '-'}`,
         <section id="beneficios" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="reveal mb-8 max-w-2xl">
             <h2 className="text-3xl font-bold">Todo lo que necesitas para decidir mejor</h2>
-            <p className="mt-3 text-slate-400">Plataforma premium con enfoque estratégico, dinámica y diseñada para convertir datos en acción.</p>
+            <p className="mt-3 text-slate-400">Plataforma premium para deportes y casino, diseñada para convertir datos en acción con estilo y estrategia.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {featureCards.map(({ icon: Icon, title, description }) => (
@@ -287,12 +292,13 @@ Número de móvil: ${formData.movil || '-'}`,
           <div className="reveal grid gap-6 lg:grid-cols-2">
             <div>
               <h2 className="text-3xl font-bold">Siempre informado, siempre listo</h2>
-              <p className="mt-3 text-slate-300">Nos mantenemos en constante comunicación para que estés al tanto de eventos, cuotas y oportunidades importantes.</p>
+              <p className="mt-3 text-slate-300">Nos mantenemos en constante comunicación para que estés al tanto de eventos, cuotas y oportunidades importantes en deportes y casino.</p>
             </div>
             <div className="space-y-3">
               {[
                 'Partidos y eventos deportivos relevantes del día',
                 'Movimientos de cuotas y momentos de entrada ideales',
+                'Alertas especiales de casino, promociones y slots destacados',
                 'Recordatorios de oportunidades para participar',
               ].map((item) => (
                 <div key={item} className="glass-card flex items-start gap-3 p-4">
@@ -345,7 +351,7 @@ Número de móvil: ${formData.movil || '-'}`,
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="reveal rounded-3xl border border-neonPurple/35 bg-gradient-to-r from-neonPurple/20 via-transparent to-neonCyan/20 p-8 text-center">
             <h2 className="text-3xl font-bold">Únete a la comunidad de InsightBets</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-slate-300">Da el siguiente paso y comienza con una experiencia más estratégica, dinámica y conectada.</p>
+            <p className="mx-auto mt-3 max-w-2xl text-slate-300">Da el siguiente paso y comienza con una experiencia más estratégica, dinámica y conectada en deportes y casino.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <a href="#registro" className="rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">Registrarme ahora</a>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/40 px-6 py-3 font-semibold transition hover:border-neonCyan hover:text-neonCyan">Contactar por WhatsApp</a>
@@ -355,9 +361,9 @@ Número de móvil: ${formData.movil || '-'}`,
 
         <section id="contacto" className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
           <div className="reveal grid gap-4 sm:grid-cols-3">
-            <a href="https://wa.me/593958731399" target="_blank" rel="noreferrer" className="glass-card p-5 transition hover:-translate-y-1 hover:border-neonGreen/40">
+            <a href="https://wa.me/593987445584" target="_blank" rel="noreferrer" className="glass-card p-5 transition hover:-translate-y-1 hover:border-neonGreen/40">
               <p className="text-sm text-slate-400">WhatsApp</p>
-              <p className="mt-2 font-semibold text-neonGreen">+593 95 873 1399</p>
+              <p className="mt-2 font-semibold text-neonGreen">+593 98 744 5584</p>
             </a>
             <a href="https://sorti.ec/home" target="_blank" rel="noreferrer" className="glass-card p-5 transition hover:-translate-y-1 hover:border-neonCyan/40">
               <p className="text-sm text-slate-400">Plataforma</p>
@@ -365,7 +371,7 @@ Número de móvil: ${formData.movil || '-'}`,
             </a>
             <a href="#registro" className="glass-card p-5 transition hover:-translate-y-1 hover:border-neonPurple/40">
               <p className="text-sm text-slate-400">Empieza hoy</p>
-              <p className="mt-2 font-semibold text-neonPurple">Completa tu registro rápido</p>
+              <p className="mt-2 font-semibold text-neonPurple">Deportes, casino y más en un solo lugar</p>
             </a>
           </div>
         </section>
@@ -373,11 +379,11 @@ Número de móvil: ${formData.movil || '-'}`,
 
       <footer className="border-t border-white/10 py-8 text-center">
         <p className="text-lg font-semibold">InsightBets</p>
-        <p className="mt-1 text-sm text-slate-400">Tu conocimiento se convierte en victoria</p>
+        <p className="mt-1 text-sm text-slate-400">Tu conocimiento se convierte en victoria • Deportes + Casino</p>
       </footer>
 
       <a
-        href="https://wa.me/593958731399"
+        href="https://wa.me/593987445584"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-neon transition hover:scale-110"
