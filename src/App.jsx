@@ -14,6 +14,8 @@ import {
   Trophy,
   Zap,
 } from 'lucide-react'
+import insightbetsLogo from './img/WhatsApp Image 2026-04-14 at 13.12.42.jpeg'
+import elephantNeon from './img/WhatsApp Image 2026-04-19 at 10.46.47.jpeg'
 
 const navLinks = [
   { id: 'beneficios', label: 'Beneficios' },
@@ -138,10 +140,9 @@ Número de móvil: ${formData.movil || '-'}`,
   return (
     <div className="relative overflow-x-hidden">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-          <a href="#inicio" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neonGreen/80 via-neonCyan/80 to-neonPurple/80 text-black shadow-neon">IB</span>
-            InsightBets
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+          <a href="#inicio" className="flex items-center gap-2">
+            <img src={insightbetsLogo} alt="InsightBets" className="h-10 w-auto rounded-lg" />
           </a>
           <div className="hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
@@ -177,42 +178,9 @@ Número de móvil: ${formData.movil || '-'}`,
             </div>
           </div>
           <div className="reveal relative flex items-center justify-center lg:justify-end">
-            <div className="glass-card relative w-full max-w-md p-6 shadow-neon">
-              <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-neonPurple/25 blur-2xl" />
-              <div className="absolute -left-8 bottom-4 h-24 w-24 rounded-full bg-neonGreen/20 blur-xl" />
-              <div className="relative space-y-4">
-                <div className="flex items-center justify-between text-xs text-slate-300">
-                  <span className="rounded-full border border-white/15 px-3 py-1">Elephant Strategy Engine</span>
-                  <span className="text-neonGreen">+27.8%</span>
-                </div>
-                <div className="flex flex-wrap gap-2 text-xs">
-                  <span className="rounded-full border border-neonGreen/40 bg-neonGreen/10 px-2 py-1 text-neonGreen">Deportes</span>
-                  <span className="rounded-full border border-neonGold/40 bg-neonGold/10 px-2 py-1 text-neonGold">Casino</span>
-                  <span className="rounded-full border border-neonCyan/40 bg-neonCyan/10 px-2 py-1 text-neonCyan">Gaming</span>
-                </div>
-                <div className="rounded-xl border border-white/10 bg-black/40 p-4">
-                  <div className="mb-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-neonCyan"><ShieldCheck size={18} /> Insight Score</div>
-                    <span className="text-sm font-semibold text-neonGreen">92/100</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-white/10">
-                    <div className="h-full w-[92%] rounded-full bg-gradient-to-r from-neonGreen to-neonCyan" />
-                  </div>
-                </div>
-                <div className="rounded-xl border border-white/10 bg-black/40 p-4">
-                  <div className="mb-3 flex items-center gap-2 text-sm text-slate-200"><ChartLine size={18} /> Tendencia de crecimiento</div>
-                  <svg viewBox="0 0 260 90" className="h-24 w-full animate-float">
-                    <polyline fill="none" stroke="url(#lineGradient)" strokeWidth="4" points="10,70 60,60 110,62 160,40 210,32 250,14" />
-                    <defs>
-                      <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#56ff8f" />
-                        <stop offset="50%" stopColor="#57e8ff" />
-                        <stop offset="100%" stopColor="#ff4fd8" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <p className="text-sm text-slate-300">Identidad visual inspirada en la fuerza, memoria y estrategia de un elefante ganador.</p>
+            <div className="relative w-full max-w-sm">
+              <div className="relative overflow-hidden rounded-2xl">
+                <img src={elephantNeon} alt="Elephant Neon" className="w-full object-cover" />
               </div>
             </div>
           </div>
@@ -235,27 +203,30 @@ Número de móvil: ${formData.movil || '-'}`,
         </section>
 
         <section id="fidelidad" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="reveal space-y-4">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="reveal lg:col-span-2 space-y-4">
               <h2 className="text-3xl font-bold">Premiamos tu fidelidad y constancia</h2>
               <p className="text-slate-300">Entre más participes y más constante seas, más beneficios podrás desbloquear.</p>
               <p className="text-slate-400">Nuestro sistema de niveles reconoce tu disciplina: acumulas puntos por predicción, obtienes bonos progresivos y desbloqueas recompensas exclusivas.</p>
               <div className="inline-flex items-center gap-2 rounded-full bg-neonGreen/15 px-4 py-2 text-sm text-neonGreen"><Trophy size={16} /> Racha activa: 12 días consecutivos</div>
             </div>
-            <div className="reveal grid gap-4 sm:grid-cols-2">
-              {[
-                { label: 'Nivel Bronce', value: '+3% bono', icon: Medal },
-                { label: 'Nivel Plata', value: '+7% bono', icon: Crown },
-                { label: 'Nivel Oro', value: '+12% bono', icon: Trophy },
-                { label: 'Predicciones del mes', value: '48 completadas', icon: Target },
-              ].map(({ label, value, icon: Icon }) => (
-                <div key={label} className="glass-card p-4">
-                  <Icon className="mb-2 text-neonPurple" size={18} />
-                  <p className="text-sm text-slate-300">{label}</p>
-                  <p className="text-xl font-bold text-neonGreen">{value}</p>
-                </div>
-              ))}
+            <div className="reveal hidden lg:flex items-center justify-center">
+              <img src={elephantNeon} alt="Loyalty Elephant" className="h-64 w-auto rounded-2xl opacity-90 hover:opacity-100 transition" />
             </div>
+          </div>
+          <div className="reveal mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: 'Nivel Bronce', value: '+3% bono', icon: Medal },
+              { label: 'Nivel Plata', value: '+7% bono', icon: Crown },
+              { label: 'Nivel Oro', value: '+12% bono', icon: Trophy },
+              { label: 'Predicciones del mes', value: '48 completadas', icon: Target },
+            ].map(({ label, value, icon: Icon }) => (
+              <div key={label} className="glass-card p-4">
+                <Icon className="mb-2 text-neonPurple" size={18} />
+                <p className="text-sm text-slate-300">{label}</p>
+                <p className="text-xl font-bold text-neonGreen">{value}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -349,12 +320,17 @@ Número de móvil: ${formData.movil || '-'}`,
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-          <div className="reveal rounded-3xl border border-neonPurple/35 bg-gradient-to-r from-neonPurple/20 via-transparent to-neonCyan/20 p-8 text-center">
-            <h2 className="text-3xl font-bold">Únete a la comunidad de InsightBets</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-slate-300">Da el siguiente paso y comienza con una experiencia más estratégica, dinámica y conectada en deportes y casino.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <a href="#registro" className="rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">Registrarme ahora</a>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/40 px-6 py-3 font-semibold transition hover:border-neonCyan hover:text-neonCyan">Contactar por WhatsApp</a>
+          <div className="reveal rounded-3xl border border-neonPurple/35 bg-gradient-to-r from-neonPurple/20 via-transparent to-neonCyan/20 p-8 overflow-hidden relative">
+            <div className="absolute right-0 top-0 opacity-20 hidden lg:block">
+              <img src={elephantNeon} alt="Community Elephant" className="h-80 w-auto" />
+            </div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold">Únete a la comunidad de InsightBets</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-slate-300">Da el siguiente paso y comienza con una experiencia más estratégica, dinámica y conectada en deportes y casino.</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="#registro" className="rounded-full bg-white px-6 py-3 font-semibold text-black transition hover:scale-105">Registrarme ahora</a>
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/40 px-6 py-3 font-semibold transition hover:border-neonCyan hover:text-neonCyan">Contactar por WhatsApp</a>
+              </div>
             </div>
           </div>
         </section>
