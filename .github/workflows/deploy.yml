@@ -31,5 +31,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.SERVER_HOST }}
           REMOTE_USER: ${{ secrets.SERVER_USER }}
+          REMOTE_PORT: "2222"
           SOURCE: "dist/"
           TARGET: "/var/www/landing-insb/"
