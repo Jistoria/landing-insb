@@ -52,7 +52,6 @@ const initialForm = {
   apellido: '',
   genero: '',
   usuario: '',
-  password: '',
   nacimiento: '',
   pais: '',
   ciudad: '',
@@ -61,7 +60,7 @@ const initialForm = {
   movil: '',
 }
 
-const requiredFields = ['nombres', 'apellido', 'genero', 'usuario', 'password', 'nacimiento', 'pais', 'ciudad', 'email', 'movil']
+const requiredFields = ['nombres', 'apellido', 'genero', 'usuario', 'nacimiento', 'pais', 'ciudad', 'email', 'movil']
 
 function App() {
   const [formData, setFormData] = useState(initialForm)
@@ -91,7 +90,6 @@ Nombres: ${formData.nombres || '-'}
 Apellido: ${formData.apellido || '-'}
 Género: ${formData.genero || '-'}
 Nombre de usuario: ${formData.usuario || '-'}
-Contraseña: ${formData.password || '-'}
 Fecha de nacimiento: ${formData.nacimiento || '-'}
 
 📍 Información de Contacto
@@ -293,7 +291,6 @@ Número de móvil: ${formData.movil || '-'}`,
                   <InputField label="Apellido" name="apellido" placeholder="Ej: Rivera" value={formData.apellido} error={errors.apellido} onChange={handleChange} required />
                   <InputField label="Género" name="genero" placeholder="Ej: Masculino / Femenino" value={formData.genero} error={errors.genero} onChange={handleChange} required />
                   <InputField label="Nombre de usuario" name="usuario" placeholder="Ej: insightpro22" value={formData.usuario} error={errors.usuario} onChange={handleChange} required />
-                  <InputField label="Contraseña" name="password" placeholder="Mínimo 8 caracteres" type="password" value={formData.password} error={errors.password} onChange={handleChange} required />
                   <InputField label="Fecha de nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" value={formData.nacimiento} error={errors.nacimiento} onChange={handleChange} required />
                 </div>
               </div>
